@@ -25,4 +25,7 @@ Thumbs.db
 .idea/
 *.iml
 
+/out/
+/out/*
+
 *.bak
