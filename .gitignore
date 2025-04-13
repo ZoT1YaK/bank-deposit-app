@@ -4,7 +4,6 @@
 /backend/.project
 /backend/.settings/
 /backend/.idea/
-backend/src/main/resources/application.properties
 backend/src/main/resources/application-local.properties
 
 # Frontend
@@ -15,6 +14,7 @@ backend/src/main/resources/application-local.properties
 /frontend/.env
 
 # === Global ignores ===
+.env
 .DS_Store
 Thumbs.db
 *.log

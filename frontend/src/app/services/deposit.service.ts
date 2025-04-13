@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class DepositService {
 
-  private apiUrl = '/deposits';
+  private apiUrl = '/api/deposits';
 
   constructor(private http: HttpClient) {}
 
