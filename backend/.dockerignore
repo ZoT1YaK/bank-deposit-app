@@ -1,5 +1,17 @@
+# Maven target directory (compiled output)
 target/
+
+# Logs
 *.log
-*.class
+
+# IDE and editor files
 *.iml
 .idea/
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Environment files (secrets, credentials)
+.env

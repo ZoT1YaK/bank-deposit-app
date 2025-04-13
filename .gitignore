@@ -1,4 +1,4 @@
-# Backend
+# === Backend ===
 /backend/target/
 /backend/.classpath
 /backend/.project
@@ -6,7 +6,7 @@
 /backend/.idea/
 backend/src/main/resources/application-local.properties
 
-# Frontend
+# === Frontend ===
 /frontend/node_modules/
 /frontend/dist/
 /frontend/.angular/cache/
@@ -20,12 +20,10 @@ Thumbs.db
 *.log
 *.tmp
 *.swp
+*.bak
 
 .vscode/
 .idea/
 *.iml
 
 /out/
-/out/*
-
-*.bak

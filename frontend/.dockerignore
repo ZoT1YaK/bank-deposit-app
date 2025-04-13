@@ -1,0 +1,22 @@
+# Node dependencies
+node_modules/
+
+# Build output
+dist/
+.angular/
+
+# Logs
+*.log
+
+# IDE/editor settings
+*.iml
+.idea/
+.vscode/
+
+# OS metadata
+.DS_Store
+Thumbs.db
+
+# Environment and config
+.env
+.env.local
