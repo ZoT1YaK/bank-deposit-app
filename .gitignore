@@ -1,12 +1,28 @@
 # Backend
 /backend/target/
-*.log
+/backend/.classpath
+/backend/.project
+/backend/.settings/
+/backend/.idea/
+backend/src/main/resources/application.properties
+backend/src/main/resources/application-local.properties
 
 # Frontend
 /frontend/node_modules/
 /frontend/dist/
+/frontend/.angular/cache/
+/frontend/.env.local
+/frontend/.env
 
-# OS / IDE
+# === Global ignores ===
 .DS_Store
-.idea/
+Thumbs.db
+*.log
+*.tmp
+*.swp
+
 .vscode/
+.idea/
+*.iml
+
+*.bak
