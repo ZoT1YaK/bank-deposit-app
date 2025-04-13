@@ -1,0 +1,14 @@
+<div class="deposit-list-wrapper">
+  <h2>Deposit List</h2>
+
+  <p class="error" *ngIf="errorMessage">{{ errorMessage }}</p>
+  <p *ngIf="!errorMessage && deposits.length === 0">No deposits found.</p>
+
+  <ul *ngIf="deposits.length > 0">
+    <li *ngFor="let deposit of deposits" class="deposit-item">
+      <span class="name">{{ deposit.customerName }}</span>
+      <span class="amount">{{ deposit.depositAmount | number:'1.0-0' }} {{ deposit.currency }}</span>
+      <span class="term">({{ deposit.term }})</span>
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,45 @@
+<div class="form-wrapper">
+  <form [formGroup]="depositForm" (ngSubmit)="onSubmit()">
+    <input formControlName="customerId" placeholder="Customer ID" />
+    <p class="error" *ngIf="depositForm.get('customerId')?.hasError('required') && depositForm.get('customerId')?.touched">
+      Customer ID is required.
+    </p>
+
+    <input formControlName="customerName" placeholder="Customer Name" />
+    <p class="error" *ngIf="depositForm.get('customerName')?.hasError('required') && depositForm.get('customerName')?.touched">
+      Customer Name is required.
+    </p>
+
+    <input type="number" formControlName="depositAmount" placeholder="Deposit Amount" />
+    <p class="error" *ngIf="depositForm.get('depositAmount')?.hasError('required') && depositForm.get('depositAmount')?.touched">
+      Deposit amount is required.
+    </p>
+    <p class="error" *ngIf="depositForm.get('depositAmount')?.hasError('min') && depositForm.get('depositAmount')?.touched">
+      Minimum deposit is 1000.
+    </p>
+
+    <select formControlName="currency">
+      <option value="" disabled selected>Select currency</option>
+      <option value="EUR">EUR</option>
+      <option value="USD">USD</option>
+    </select>
+    <p class="error" *ngIf="depositForm.get('currency')?.hasError('required') && depositForm.get('currency')?.touched">
+      Currency is required.
+    </p>
+
+    <select formControlName="term">
+      <option value="" disabled selected>Select term</option>
+      <option *ngFor="let t of ['1 month', '3 months', '6 months', '1 year', '2 years', '3 years']" [value]="t">{{ t }}</option>
+    </select>
+    <p class="error" *ngIf="depositForm.get('term')?.hasError('required') && depositForm.get('term')?.touched">
+      Term is required.
+    </p>
+
+    <button type="submit" [disabled]="depositForm.invalid">Submit</button>
+
+    <div class="message-slot">
+      <p class="success" *ngIf="successMessage">{{ successMessage }}</p>
+      <p class="error" *ngIf="errorMessage">{{ errorMessage }}</p>
+    </div>
+  </form>
+</div>
