@@ -8,6 +8,8 @@ services:
     container_name: bank-backend
     ports:
       - "8081:8081"
+    env_file:
+      - .env
     environment:
       - QUARKUS_DATASOURCE_JDBC_URL=${QUARKUS_DATASOURCE_JDBC_URL}
       - QUARKUS_DATASOURCE_USERNAME=${QUARKUS_DATASOURCE_USERNAME}
