@@ -4,7 +4,10 @@ import { CommonModule } from '@angular/common';
 import { DepositService } from '../services/deposit.service';
 import { DepositRequest } from '../models/deposit-request.model';
 
-
+/**
+ * Form component to submit a new deposit request.
+ * Emits `depositAdded` when submission succeeds.
+ */
 @Component({
   selector: 'app-deposit-form',
   standalone: true,
@@ -29,6 +32,10 @@ export class DepositFormComponent {
     });
   }
 
+  /**
+   * Called when the user submits the form.
+   * Validates and sends a deposit request to the backend.
+   */
   onSubmit() {
     if (this.depositForm.invalid) {
       this.depositForm.markAllAsTouched();

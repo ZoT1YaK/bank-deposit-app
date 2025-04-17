@@ -3,6 +3,9 @@ import { CommonModule } from '@angular/common';
 import { DepositService } from '../services/deposit.service';
 import { DepositRequest } from '../models/deposit-request.model';
 
+/**
+ * Displays a list of all submitted deposit requests.
+ */
 @Component({
   selector: 'app-deposit-list',
   standalone: true,
@@ -16,6 +19,9 @@ export class DepositListComponent implements OnInit {
 
   constructor(private depositService: DepositService) {}
 
+  /**
+   * On component init, fetch the deposit data from backend.
+   */
   ngOnInit() {
     this.depositService.getAll().subscribe({
       next: (data) => {

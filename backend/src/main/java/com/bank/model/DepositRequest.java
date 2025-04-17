@@ -3,6 +3,9 @@ package com.bank.model;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
 
+/**
+ * Represents a bank deposit request.
+ */
 @Entity
 @Table(name = "deposit_requests")
 public class DepositRequest {
